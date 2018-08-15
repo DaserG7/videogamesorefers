@@ -12,10 +12,6 @@
         "resource": "/login",
         "methods": ["GET", "POST"],
         "action": "allow"
-    },{
-        "resource": "/signup",
-        "methods": "*",
-        "action": "allow"
     }]
 },{
     "group": "estandar",
