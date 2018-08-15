@@ -12,6 +12,10 @@
         "resource": "/login",
         "methods": ["GET", "POST"],
         "action": "allow"
+    },{
+        "resource": "/logout",
+        "methods": ["GET", "POST"],
+        "action": "allow"
     }]
 },{
     "group": "estandar",
