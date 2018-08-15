@@ -2,9 +2,9 @@
   "name": "libreria",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "dev":"nodemon ./src/app.js"
+    "start":"node app"
   },
   "author": "Sebastian Rodriguez",
   "license": "ISC",

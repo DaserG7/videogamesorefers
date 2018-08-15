@@ -13,8 +13,12 @@ var passportsetup = require("./passportsetup");
 var app = express();
 
 
-//mongoose.connect("mongodb://sebastian01:abcdario123@ds263571.mlab.com:63571/libreria-virtual");
-mongoose.connect("mongodb://localhost:27017/libreria");
+mongoose.connect("mongodb://sebastian02:123abc@ds123012.mlab.com:23012/libreria");
+//mongoose.connect("mongodb://Georsh:G6261313535@ds123012.mlab.com:23012/gamestore");
+
+
+
+//mongoose.connect("mongodb://localhost:27017/libreria");
 
 passportsetup();
 
