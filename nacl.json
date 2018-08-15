@@ -13,8 +13,8 @@
         "methods": ["GET", "POST"],
         "action": "allow"
     },{
-        "resource": "/logout",
-        "methods": ["GET", "POST"],
+        "resource": "/signup",
+        "methods": "*",
         "action": "allow"
     }]
 },{
