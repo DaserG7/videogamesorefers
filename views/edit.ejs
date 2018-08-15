@@ -1,0 +1,9 @@
+<%include _header%>
+<h1> Actualizar tu perfil</h1>
+<form action = "/edit" method = "post">
+    <div class = "form-group">
+        <input name = "displayName" type = "text" class= "form-conytol" placeholder = "Nombre para mostrar" value ="<% currentZombie.displayName ||""%>"/>
+    </div>
+    <input type= "submit" value = "Actualizar" class = "btn btn-primary btn-blck"/>
+</form>
+<%include _footer%>

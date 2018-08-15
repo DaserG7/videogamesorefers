@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Libreria</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <style>
+    
+    @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+    @import url('https://fonts.googleapis.com/css?family=Eater');
+    @import url('https://fonts.googleapis.com/css?family=Nunito');
+    @import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+    @import url('https://fonts.googleapis.com/css?family=Pacifico|Syncopate');
+    @import "compass/css3";
+        a{
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+
+
+        h1{
+            margin-top:10%;
+            font-family: 'Nunito', sans-serif;
+            color: white;
+            text-align:center;
+            
+        }
+
+        #arma{
+            color:white;
+        }
+        body{
+            background-image:url('https://2.bp.blogspot.com/-4yt1c5Db6pE/WwQ-XELZ0NI/AAAAAAAB9_M/D_i1r-pkkW8s53lGFeIKpGdethQbmMSIgCLcBGAs/s1600/De%2Blibros%2By%2Blecturas.jpg') ;
+            color:white;
+            background-size: 100%;
+            background-attachment: fixed;
+        }
+        #desc{
+            margin-left:2%;
+        }
+        #titulo{
+            margin-left:-2%;
+        }
+
+        #cuadro{
+
+            width:50%;
+            height:60%;
+            margin-left:24%;
+            border-radius: 10%;
+            margin-top:5%;
+            align-items: center;
+            
+        }
+        #autor{
+            font-family: 'Indie Flower', cursive;
+            text-align:center;
+            font-size:150%;
+            color:white;
+            margin-left:35%;
+        }
+        #autorletra{
+            font-family: 'Indie Flower', cursive;
+            font-size:150%;
+
+        }
+        #boton{
+            margin-left:130%;
+        }
+
+        #cajita{
+            width: 50%;
+            margin-left: 25%;
+            margin-top:10%;
+        }
+        #libro{
+            background:black;
+            opacity: 0.8;
+            border-radius: 29px 29px 29px 29px;
+            margin-top:25px;
+        }
+        #tit{
+            margin-left:10%;
+            font-family: 'Indie Flower', cursive;
+            font-size:120%;
+        }
+        #gener{
+            margin-left:10%;
+            font-family: 'Indie Flower', cursive;
+            font-size:120%;
+        }
+        #descrip{
+            margin-left:10%;
+            font-family: 'Indie Flower', cursive;
+            font-size:120%;
+        }
+        #mapita{
+            margin-left: 9%;
+            margin-top:2%;
+        }
+        #endonde{
+            margin-top:8%;
+            margin-left:15%;
+            margin-right:15%;
+            font-family: 'Pacifico', cursive;
+            font-size:150%;
+        }
+        #cajaregis{
+
+            width:50%;
+            height:60%;
+            margin-left:24%;
+            border-radius: 10%;
+            margin-top:5%;
+            align-items: center;
+
+        }
+    
+    </style>
+
+    </head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">Biblioteca vitual</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+    <% if (currentZombie){%>
+   
+    <a class="nav-item nav-link" href="/edit">Edita tu perfil <%= currentZombie.name() %></a>
+    <a class="nav-item nav-link" href="/logout">Salir</a>
+    <a class="nav-item nav-link" href="/signup">Registrar usuario</a>
+      <a class="nav-item nav-link" href="/createbook">Registrar Libro nuevo</a>
+      <a class="nav-item nav-link" href="/libros">Libros en inventario</a>
+      <%}else{%>
+      <a class="nav-item nav-link" href="/login">Entrar</a>
+      
+      
+      
+      <% } %>
+      
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+    <% errors.forEach(function(error){%>
+        <div class="alert alert-danger" role="alert">
+            <%=error%>
+        </div>
+        <% }) %>
+        <% infos.forEach(function(info){ %>
+                <div class="alert alert-info" role="alert">
+            <%= info %>
+            </div>
+            <% }) %>

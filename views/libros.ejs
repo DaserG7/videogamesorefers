@@ -1,0 +1,36 @@
+<% include _header %>
+
+<h1> Libros en inventario</h1>
+<% libros.forEach((equipment)=>{ %>
+    <div class="panel panel-default">
+    <div id="pdfevent">
+        <div id ='libro';  class="panel panel-default">
+
+        <div class="row">
+        <label id='autor' class="col-md-1 col-form-label">Autor:</label>
+        <label id ='autorletra' class="col-form-label"><%= equipment.description %></label>
+        <input type="hidden" name="titulo1" value="<%= equipment.power %>">
+        </div>
+            <div class="row">
+                <label id='tit'; class="col-md-1 col-form-label">Título:</label>
+                <label id ='titulo' class="col-form-label"><%= equipment.power %></label>
+                <input type="hidden" name="titulo2" value="<%= equipment.power %>">
+            </div>
+            <div class="row">
+                <label id='gener';  class="col-md-1 col-form-label" id = 'autor';>Genero:</label>
+                <label  class="col-form-label"><%= equipment.genero %></label>
+                <input type="hidden" name="titulo3" value="<%= equipment.genero %>">
+            </div>
+            <div class="row">
+                <label id='descrip'; class="col-md-1 col-form-label">Descripcion:</label>
+                <label id ='desc' class="col-form-label"><%= equipment.category %></label>
+            </div>
+        </div>    
+        
+    <% }) %>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-2">
+        <input id = 'botonpdf'; type="button" onclick="printDiv('pdfevent')" value="PDF" class="btn btn-danger"/>
+        </div> 
+    <% include _footer %>
