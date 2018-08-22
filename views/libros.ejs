@@ -1,18 +1,18 @@
 <% include _header %>
 
-<h1> Libros en inventario</h1>
+<h1> Juegos Pedidos</h1>
 <% libros.forEach((equipment)=>{ %>
     <div class="panel panel-default">
     <div id="pdfevent">
-        <div id ='libro';  class="panel panel-default">
+        <div id ='games';  class="panel panel-default">
 
         <div class="row">
-        <label id='autor' class="col-md-1 col-form-label">Autor:</label>
-        <label id ='autorletra' class="col-form-label"><%= equipment.description %></label>
+        <label id='desa' class="col-md-1 col-form-label">Desarrolladora:  </label>
+        <label id ='desaletra' class="col-form-label"><%= equipment.description %></label>
         <input type="hidden" name="titulo1" value="<%= equipment.power %>">
         </div>
             <div class="row">
-                <label id='tit'; class="col-md-1 col-form-label">Título:</label>
+                <label id='tit'; class="col-md-1 col-form-label">Nombre:</label>
                 <label id ='titulo' class="col-form-label"><%= equipment.power %></label>
                 <input type="hidden" name="titulo2" value="<%= equipment.power %>">
             </div>
@@ -31,6 +31,6 @@
     <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-2">
-        <input id = 'botonpdf'; type="button" onclick="printDiv('pdfevent')" value="PDF" class="btn btn-danger"/>
+        <input id = 'botonpdf'; type="button" onclick="printDiv('pdfevent')" value="Imprimir el Archivo" class="btn btn-danger"/>
         </div> 
     <% include _footer %>

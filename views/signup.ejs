@@ -1,21 +1,21 @@
 <% include _header %>
 
-<h1>Registro</h1>
+<h1>Registro de Empleado</h1>
 <div id = 'cajaregis'>
 <form action="/signup" method="post">
     <div class="form-group"> 
-        <input name="username" type="text" class="form-control" placeholder="Nombre de usuario" required autofocus/>
+        <input name="username" type="text" class="form-control" placeholder="Nick del Empleado" required autofocus/>
     </div>
     <div class="form-group">
         <input name="password" type="password" class="form-control" placeholder="Contraseña" required/>
     </div>
-    <a class="form-group">Tipo de usuario</a>
+    <a class="form-group">Tipo de Empleado</a>
     <select name="role" class="form-group">
-        <option value="administrador">Administrador</option>
-        <option value="estandar">Usuario estandar</option>
+        <option value="administrador">Empleado Admin</option>
+        <option value="estandar">Empleado Normal</option>
 
     </select>
-    <input type="submit" value="Registrarse" class="btn btn-primary btn-block"/>
+    <input type="submit" value="Clic para la Magia" class="btn btn-primary btn-block"/>
 </form>
 </div>
 

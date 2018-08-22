@@ -1,25 +1,25 @@
 <% include _header %>
 
-<h1>Registrar Nuevo libro</h1>
+<h1>Agregar Juegos Pedidos</h1>
 
-<form id = 'cajita'; action="/createbook" method="post">
+<form id = 'caja'; action="/createbook" method="post">
     <div class="form-group"> 
-        <input name="description" type="text" class="form-control" placeholder="Autor"required autofocus/>
+        <input name="description" type="text" class="form-control" placeholder="Desarrolladora"required autofocus/>
     </div>
     <div class="form-group">
-        <input name="power" type="text" class="form-control" placeholder="Título"required/>
+        <input name="power" type="text" class="form-control" placeholder="Nombre del Juego"required/>
     </div>
     <div class="form-group">
-        <textarea name="category" type="text" class="form-control" placeholder="Descripción"required></textarea>
+        <textarea name="category" type="text" class="form-control" placeholder="Dame una descripcion del juego"required></textarea>
     </div>
     <div class="form-group">
-        <input name="genero" type="text" class="form-control" placeholder="Genero"required/>
+        <input name="genero" type="text" class="form-control" placeholder="Genero del Juego"required/>
     </div>
         <div class="row">
         <div class="col-md-2">
         </div>
             <div class="col-md-3">
-        <input id = 'boton'; type="submit" value="Registrar" class="btn btn-danger"/>
+        <input id = 'boton'; type="submit" value="Agregar Juego Deseado" class="btn btn-danger"/>
             </div>
         </div>
     </form>

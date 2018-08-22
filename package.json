@@ -6,7 +6,7 @@
   "scripts": {
     "start":"node app"
   },
-  "author": "Sebastian Rodriguez",
+  "author": "Raul Emmanuel Garcia Chairez",
   "license": "ISC",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",

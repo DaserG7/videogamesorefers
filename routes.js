@@ -53,7 +53,7 @@ router.post("/signup",(req,res,next)=>{
             return next(err);
         }
         if(zombie){
-            req.flash("error","El nombre de usuario ya ha sido registrado");
+            req.flash("error","El Nick de Empleado ya esta en uso");
             return res.redirect("/signup");
         }
         var newZombie = new Zombie({
@@ -83,10 +83,10 @@ router.get("/createbook",(req,res)=>{
 });
 
 router.post("/createbook",(req,res,next)=>{
-    var description = req.body.description; // otro 
+    var description = req.body.description; 
     var power = req.body.power
     var category = req.body.category;
-    var genero = req.body.genero; //aqui le cambie por el de el otro
+    var genero = req.body.genero; 
 
     var newWeapon = new Weapon({
         description: description,
@@ -137,7 +137,7 @@ router.post("/edit", ensureAuthenticated,(req,res,next)=>{
                 next(err);
                 return;
             }
-            req.flash("info","Perfil Actualizado");
+            req.flash("info","Nick Actualizado");
             res.redirect("/edit");
         });
 });
@@ -157,7 +157,7 @@ router.post("/createpdf", (req,res,next) => {
     return res.redirect("/libros");
     }else{
     
-        req.flash("error", "Esta publicación ya se ha guardado");
+        req.flash("error", "Este Juego ya se ha guardado");
         return res.redirect('/img/'+titulo1+'.pdf');
     }
 });
@@ -168,7 +168,7 @@ function ensureAuthenticated(req,res,next){
     if(req.isAuthenticated()){
         next();
     }else{
-        req.flash("info","Necesitas iniciar sesión para poder ver esta sección");
+        req.flash("info","Necesitas ingresar tu Nick para poder ver esta sección");
         res.redirect("/login");
     }
 }

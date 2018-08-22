@@ -13,12 +13,7 @@ var passportsetup = require("./passportsetup");
 var app = express();
 
 
-mongoose.connect("mongodb://sebastian02:123abc@ds123012.mlab.com:23012/libreria");
-//mongoose.connect("mongodb://Georsh:G6261313535@ds123012.mlab.com:23012/gamestore");
-
-
-
-//mongoose.connect("mongodb://localhost:27017/libreria");
+mongoose.connect("mongodb://localhost:27017/libreria");
 
 passportsetup();
 
@@ -30,7 +25,7 @@ app.set("view engine","ejs");
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(session({
-   secret:"HOLA ESTE ES MI PRIMER TRABAJO EN MONGODB",
+   secret:"HOLA ESTE ES MI PRIMER TRABAJO EN MONGODB PLOX",
    resave:true,
    saveUninitialized: true
 }));

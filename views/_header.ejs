@@ -4,24 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Libreria</title>
+    <title>VideoGames Orders</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <style>
     
     @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
     @import url('https://fonts.googleapis.com/css?family=Eater');
-    @import url('https://fonts.googleapis.com/css?family=Nunito');
-    @import url('https://fonts.googleapis.com/css?family=Indie+Flower');
     @import url('https://fonts.googleapis.com/css?family=Pacifico|Syncopate');
     @import "compass/css3";
         a{
-            font-family: 'Roboto Condensed', sans-serif;
+            font-family: 'Pacifico', sans-serif;
         }
 
 
         h1{
             margin-top:10%;
-            font-family: 'Nunito', sans-serif;
+            font-family: 'Pacifico', sans-serif;
             color: white;
             text-align:center;
             
@@ -31,7 +29,7 @@
             color:white;
         }
         body{
-            background-image:url('https://2.bp.blogspot.com/-4yt1c5Db6pE/WwQ-XELZ0NI/AAAAAAAB9_M/D_i1r-pkkW8s53lGFeIKpGdethQbmMSIgCLcBGAs/s1600/De%2Blibros%2By%2Blecturas.jpg') ;
+            background-image:url('https://wallportal.com/uploads/posts/gaming-wallpapers-1440x900/gaming_wallpapers_1440x900_002.jpg') ;
             color:white;
             background-size: 100%;
             background-attachment: fixed;
@@ -40,7 +38,7 @@
             margin-left:2%;
         }
         #titulo{
-            margin-left:-2%;
+            margin-left: 1%;
         }
 
         #cuadro{
@@ -53,52 +51,53 @@
             align-items: center;
             
         }
-        #autor{
-            font-family: 'Indie Flower', cursive;
-            text-align:center;
+        #desa{
+            font-family: 'Pacifico', cursive;
+            text-align: left;
             font-size:150%;
-            color:white;
-            margin-left:35%;
+            color:black;
+            margin-left:25%;
         }
-        #autorletra{
-            font-family: 'Indie Flower', cursive;
+        #desaletra{
+            font-family: 'Roboto Condensed', cursive;
+            text-align: left;
             font-size:150%;
+            margin-left: 8%;
 
         }
         #boton{
             margin-left:130%;
         }
 
-        #cajita{
+        #caja{
             width: 50%;
             margin-left: 25%;
-            margin-top:10%;
+            margin-top: 10%;
         }
-        #libro{
-            background:black;
+        #games{
+            background:gray;
             opacity: 0.8;
             border-radius: 29px 29px 29px 29px;
             margin-top:25px;
         }
         #tit{
             margin-left:10%;
-            font-family: 'Indie Flower', cursive;
+            font-family: 'Pacifico', cursive;
             font-size:120%;
+            text-align: left;
+            margin-left: 10%; 
         }
         #gener{
             margin-left:10%;
-            font-family: 'Indie Flower', cursive;
+            font-family: 'Pacifico', cursive;
             font-size:120%;
         }
         #descrip{
             margin-left:10%;
-            font-family: 'Indie Flower', cursive;
+            font-family: 'Pacifico', cursive;
             font-size:120%;
         }
-        #mapita{
-            margin-left: 9%;
-            margin-top:2%;
-        }
+
         #endonde{
             margin-top:8%;
             margin-left:15%;
@@ -122,7 +121,7 @@
     </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="/">Biblioteca vitual</a>
+  <a class="navbar-brand" href="/">VideoGames Orders</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -130,14 +129,14 @@
     <div class="navbar-nav">
     <% if (currentZombie){%>
    
-    <a class="nav-item nav-link" href="/edit">Edita tu perfil <%= currentZombie.name() %></a>
+    <a class="nav-item nav-link" href="/edit">Edita tu Nick Chavo -> <%= currentZombie.name() %></a>
     <a class="nav-item nav-link" href="/logout">Salir</a>
-    <a class="nav-item nav-link" href="/signup">Registrar usuario</a>
-      <a class="nav-item nav-link" href="/createbook">Registrar Libro nuevo</a>
-      <a class="nav-item nav-link" href="/libros">Libros en inventario</a>
+    <a class="nav-item nav-link" href="/signup">Agregar Empleado</a>
+      <a class="nav-item nav-link" href="/createbook">Ingresar Juegos Deseados</a>
+      <a class="nav-item nav-link" href="/libros">Juegos Pedidos</a>
       <%}else{%>
-      <a class="nav-item nav-link" href="/login">Entrar</a>
-      
+      <a class="nav-item nav-link" href="/login">Clic para Entrar</a>
+      <a class="nav-item nav-link" href="/signup">Agregar Empleado</a>
       
       
       
